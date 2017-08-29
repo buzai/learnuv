@@ -36,7 +36,7 @@ void open_cb(uv_fs_t* open_req) {
 }
 
 void read_cb(uv_fs_t* read_req) {
-  int r = 0;;
+  int r = 0;
   if (read_req->result < 0) CHECK(read_req->result, "uv_fs_read callback");
 
   context_t* context = read_req->data;
